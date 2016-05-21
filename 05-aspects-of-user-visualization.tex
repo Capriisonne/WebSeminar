@@ -1,0 +1,59 @@
+\section{Aspects of user visualization}
+
+\subsection{Amount of contribution}
+\subsubsection{Theory}
+\subsubsection{Visualization}
+
+\subsection{Topic Models}
+\subsubsection{Latent dirichlet allocation}
+
+Latent Dirichlet allocation (LDA) \cite{Blei:2003:LDA:944919.944937, heinrich2005parameter, steyvers} is a unsupervised machine learning technique 
+that discovers latent topics from a corpus of documents so that the documents 
+can then be assigned automatically into appropriate topics. New documents can 
+also be classified into topics based on these latent topics. 
+More specifically, in LDA, each document is represented as a mixture of various
+topics, where each topic is a mixture of words. These mixtures are represented
+by P(topic|document) for all topics and documents and P(word|topic) for all words 
+in the vocabulary. Each word may occur in several different topics with a different probability, and each document is assumed to be characterized by a particular set of topics.
+
+
+\subsubsection{Nonnegative Matrix Factorization}
+
+Nonnegative matrix factorization (NMF) is an unsupervised family of algorithms that simultaneously perform dimension reduction and clustering.NMF was first introduced
+by Paatero and Tapper \cite{paa94} as positive matrix factorization and subsequently
+popularized by Lee and Seung \cite{lee99}.
+
+
+\subsubsection{Compare LDA and NFM}
+
+\subsubsection{Visualization}
+
+
+\subsection{Impact of post}
+\subsubsection{Theory}
+
+\subsubsection{Cosine Similarity}
+
+For creating the user timeline, we need to find similar posts that a user share both in Twitter and Facebook. For this purpose, we calculate the cosine similarity metric.The cosine similarity \cite{similarity} between two vectors (or two documents on the Vector Space) is a measure that calculates the cosine of the angle between them. This metric is a measurement of orientation and not magnitude, it can be seen as a comparison between documents on a normalized space because we’re not taking into the consideration only the magnitude of each word count (tf-idf) of each document, but the angle between the documents. 
+
+Given two posts $t_{a}$ and $t_{b}$, their cosine similarity is
+
+\begin{equation}
+\cos ({\bf t_{a}},{\bf t_{b}})= {{\bf t_{a}} {\bf t_{b}} \over \|{\bf t_{a}}\| \|{\bf \textbf{b}}\|} 
+\end{equation}
+
+where  $t_{a}$ and $t_{b}$ are $m$-dimensional vectors over the term set
+$T = {t_{1}, . . . , t_{m}}$. Each dimension represents a term with its
+weight in the document, which is non-negative. As a result, the cosine similarity 
+is non-negative and bounded between $[0,1]$. 
+
+We predefine a threshold to accept two similar posts to have similarity at least $60\%$. This portion lets us a great amount of similar posts and also recognize twitter posts that have urls, hashtags and mentions.
+
+
+
+\subsubsection{Visualization}
+\subsubsection{Other possibilities to visualize text corpus}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "isae-report-template"
+%%% End: 
