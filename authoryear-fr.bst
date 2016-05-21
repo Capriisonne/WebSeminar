@@ -17,6 +17,12 @@
 	% (1) you make absolutely no changes to your copy, including name, or
 	% (2) if you do make changes, you name it something other than
 	% btxbst.doc, plain.bst, unsrt.bst, alpha.bst, and abbrv.bst.
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{isae-report-template}
+\caption{}
+\label{fig:isae-report-template}
+\end{figure}
 	% This restriction helps ensure that all standard styles are identical.
  
 ENTRY
